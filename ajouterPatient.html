@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enregistrement Patient</title>
+</head>
+<style>
+  body{
+    
+    position: relative;
+    z-index: 0;
+}  
+
+body::before{/*cible l'image seule*/
+    top: 0;/*colle en haut*/
+    left: 0;/*colle a gauche*/
+    width: 100%;/*prend toute la largeur*/
+    height: 100%;/*prend toute la hauteur*/
+    content: "";/*oblige pour afficher un pseudo-elemnet*/
+    filter: brightness(90%);
+    z-index: -1;/*met l'image derriere le contenue*/
+    background-size:cover;/*l'image couvre tout l'elt*/
+    background-image: url("IMG-20260325-WA0024.jpg");
+    position: absolute;/*position l'elt par rapport au body*/
+    background-repeat: no-repeat;/*empeche la duplication*/
+    background-attachment: fixed;/*l'image reste fixe lorsqu'on scroll*/
+}
+
+header{
+    text-align: center;
+}  
+
+#id{
+   text-align: center;
+}  
+
+.text{
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.paragraphe{
+    width: 700px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+
+</style>
+
+<body>
+
+<header>
+    <h1>BIENVENUE SUR LE SITE DE L'INFOCARDIOLOGUE</h1>
+    <h2>Enregistrer les informations du patient ici</h2>  
+</header>
+
+<meta charset="UTF-8">
+<meta content="viewport">
+
+<form>
+    <div id="id">
+        Nom:<br>
+        <input type="text" name="nom" class="text"><br><br>
+
+        Prénom:<br> 
+        <input type="text" name="prenom" class="text"><br><br>
+
+        Lieu de naissance:<br>
+        <input type="text" name="lieu_naissance" class="text"><br><br>
+
+        Téléphone:<br>
+        <input type="tel" placeholder="12" class="text"><br>
+
+        Email:<br>
+        <input type="email" name="email" class="text"><br><br>
+
+        Adresse:<br>
+        <input type="text" name="adresse" class="text"><br><br>
+
+        sexe:<br>
+        <select class="text">
+            <option>
+                M(masculin)
+            </option>
+            <option>
+                F(feminin)
+            </option>
+        </select><br><br>
+
+        Date de naissance:<br>
+        <input type="date" name="date_naissance" class="text"><br><br>
+
+        Age:<br>
+        <input type="number" min="1" max="120" class="text"><br><br>
+     
+    </div>
+<div>
+    Heure D'arrivee:<br>
+    <select>
+        <option>
+            00
+        </option>
+        <option>
+            01
+        </option>
+        <option>
+            02
+        </option>
+        <option>
+            03
+        </option>
+        <option>
+            04
+        </option>
+        <option>
+            05
+        </option>
+        <option>
+            06
+        </option>
+        <option>
+            07
+        </option>
+        <option>
+            08
+        </option>
+        <option>
+            09
+        </option>
+        <option>
+            10
+        </option>
+        <option>
+            11
+        </option>
+        <option>
+            12
+        </option>
+        <option>
+            13
+        </option>
+        <option>
+            14
+        </option>
+        <option>
+            15
+        </option>
+        <option>
+            16
+        </option>
+        <option>
+            17
+        </option>
+        <option>
+            18
+        </option>
+        <option>
+            19
+        </option>
+        <option>
+            20
+        </option>
+        <option>
+            21
+        </option>
+        <option>
+            22
+        </option>
+        <option>
+            23
+        </option>
+    </select>
+    <select>
+        <option>
+            00
+        </option>
+        <option>
+            01
+        </option>
+        <option>
+            02
+        </option>
+        <option>
+            03
+        </option>
+        <option>
+            04
+        </option>
+        <option>
+            05
+        </option>
+        <option>
+            06
+        </option>
+        <option>
+            07
+        </option>
+        <option>
+            08
+        </option>
+        <option>
+            09
+        </option>
+        <option>
+            10
+        </option>
+        <option>
+            11
+        </option>
+        <option>
+            12
+        </option>
+        <option>
+            13
+        </option>
+        <option>
+            14
+        </option>
+        <option>
+            15
+        </option>
+        <option>
+            16
+        </option>
+        <option>
+            17
+        </option>
+        <option>
+            18
+        </option>
+        <option>
+            19
+        </option>
+        <option>
+            20
+        </option>
+        <option>
+            21
+        </option>
+        <option>
+            22
+        </option>
+        <option>
+            23
+        </option>
+        <option>
+            24
+        </option>
+        <option>
+            25
+        </option>
+        <option>
+            26
+        </option>
+        <option>
+            27
+        </option>
+        <option>
+            28
+        </option>
+        <option>
+            29
+        </option>
+        <option>
+            30
+        </option>
+        <option>
+            31
+        </option>
+        <option>
+            32
+        </option>
+        <option>
+            33
+        </option>
+        <option>
+            34
+        </option>
+        <option>
+            35
+        </option>
+        <option>
+            36
+        </option>
+        <option>
+            37
+        </option>
+        <option>
+            38
+        </option>
+        <option>
+            39
+        </option>
+        <option>
+            40
+        </option>
+        <option>
+            41
+        </option>
+        <option>
+            42
+        </option>
+        <option>
+            43
+        </option>
+        <option>
+            44
+        </option>
+        <option>
+            45
+        </option>
+        <option>
+            46
+        </option>
+        <option>
+            47
+        </option>
+        <option>
+            48
+        </option>
+        <option>
+            49
+        </option>
+        <option>
+            50
+        </option>
+        <option>
+            51
+        </option>
+        <option>
+            52
+        </option>
+        <option>
+            53
+        </option>
+        <option>
+            54
+        </option>
+        <option>
+            55
+        </option>
+        <option>
+            56
+        </option>
+        <option>
+            57
+        </option>
+        <option>
+            58
+        </option>
+        <option>
+            59
+        </option>
+    </select><br><br>
+
+    Residence du patient:<br>
+    <select id="ville" name="ville">
+        <option value="lt">
+            Douala
+        </option>
+        <option value="ydn">
+            Yaounde
+        </option>
+        <option value="Bmda">
+            Bamenda
+        </option>
+        <option value="Buea">
+            Buea
+        </option>
+        <option value="btr">
+            Bertoua
+        </option>
+        <option value="Ebwa">
+            Ebolowa
+        </option>
+        <option value="mra">
+            Maroua
+        </option>
+        <option value="Gra">
+            Garoua
+        </option>
+        <option value="Grndere">
+            Garoundere
+        </option>
+        <option value="Bfs">
+            Bafoussam
+        </option>
+        <option>
+            Autres
+        </option>
+    </select><br><br>
+
+    pays du patient:<br>
+    <select>
+        <option>
+            Amerique
+        </option>
+        <option>
+            Bresil
+        </option>
+        <option>
+            Belgique
+        </option>
+        <option>
+            cameroun
+        </option>
+        <option>
+            Canada
+        </option>
+        <option>
+            Cote D'ivoir
+        </option>
+        <option>
+            Danmark
+        </option>
+    </select><br><br>
+
+    Nouveau patient ?:<br>
+    oui
+    <input type="checkbox" name="adresse">
+    non
+    <input type="checkbox" name="adresse"><br><br>
+
+    Avez-vous une Assurance ?:<br>
+    oui
+    <input type="checkbox" name="adresse">
+    non
+    <input type="checkbox" name="adresse"><br><br>
+</div>
+
+    Description:<br>
+    <textarea name="description" class="paragraphe"></textarea><br><br>
+
+    État du patient:<br>
+    <textarea name="etat" class="paragraphe"></textarea><br><br>
+
+    <button type="submit"><strong>ENREGISTRER</strong></button><br><br>
+    <button type="submit"><strong>ANNULER</strong></button>
+
+</form><br>
+
+<img src="image.jpg" alt="UNE IMAGE"><br><br>
+
+<mark><b>Remplir minusieusement le formulaire</b></mark><br><br>
+
+<mark><small>*N'oubliez aucun detail svp</small></mark>
+
+</body>
+</html>
