@@ -7,127 +7,9 @@
     <title>
         ACCEUIL
     </title>
-</head>
-<style>
-    body {
-       position: relative;
-       z-index: 0;
-    }
-
-    body::before{/*permet de ne pas agir directement sur le HTML*/
-    left: 0;/*colle a gauche*/
-    width: 100%;/*prend toute la largeur*/
-    height: 100%;/*prend toute la hauteur*/
-    content: "";/*oblige pour afficher un pseudo-elemnet*/
-    filter: brightnes(90%);
-    z-index: -1;/*met l'image derriere le contenue*/
-    background-size:cover;/*l'image couvre tout l'elt*/
-    background-image: url("IMG-20260325-WA0025.jpg");
-    position: absolute;/*position l'elt par rapport au body*/
-    background-repeat: no-repeat;/*empeche la duplication*/
-    background-attachment: fixed;/*l'image reste fixe lorsqu'on scroll*/
-    }
-
-    .claire{
-        color: white;
-    }
-
-    #menuparametre{
-        position:absolute;
-        top: 50px;
-        right: 10px;
-        background-color: white;
-        padding: 10px;
-        width: 150px;
-    }
-    /*cacher le menu au debut*/
-    .hidden{ /*classe qu'on peut ajouter a un elt*/
-        display: none;
-    }
-    /*ul=liste, liste-style enleve les pt devant les elts et padding:0; enleve les espaces par defaut*/
-    #menuparametre ul{
-        list-style: none;
-        padding: 0;
-        background-color: black;
-        padding: 30px;
-    }
-    /*li=chaque elt de la liste, padding:8px; ajoute de l'espace autour du texte*/
-    #menuparametre li{
-        padding: 8px;
-        cursor: pointer;
-    }
-    /*hover=quand la sourie passe sur l'elt*/
-    #menuparametre li:hover {
-        background-color: darkgoldenrod;
-    }
     
-    #para {
-        text-align: right;
-        
-    }
-
-    #settings{
-        anchor-name: --anchor-settings;
-    }
-
-    #help{
-        anchor-name: --anchor-help;
-    }
-
-    #send{
-        anchor-name: --anchor-send;
-    }
-
-    #info{
-        anchor-name: --anchor-info;
-    }
-
-    .txt{
-        text-align: center;
-        background-color: rgba(227, 235, 225, 0);
-        margin: 100px;
-    }
-
-    footer{
-        text-align: end;
-        margin-top: 1px;
-    }
-
-    nav{
-        text-align: left;
-        margin-top: 60px;
-        
-    }
-
-button {
-    border-radius: 15px;
-}
-
-.video-bas{
-  margin-top: auto;/*pause la videoen bas*/
-  padding: 0px;
-}
-
-.video-bas{
- width: 80%;/*taille de la video*/
-}
-
-#recherche{
-    text-align: center;
-}
-
-#search{
-    border-radius: 20px;
-    width: 500px;
-    height: 30px;
-}
-
-button :hover{/*change le style lorsque la sourie passe sur le boutton*/
-    background-color: blue;
-}
-
-</style>
-
+</head>
+<link rel="stylesheet" href="cascading.css">
 <body>
     <header>
         <section id="para">
@@ -135,11 +17,19 @@ button :hover{/*change le style lorsque la sourie passe sur le boutton*/
                 🎲
             </button><br><br>
             <div id="menuparametre" class="hidden">
-                <ul>
-                    <li>
-                        <button type="button">🖌️Theme</button>
-                    </li>
-                </ul>
+                <p>
+                  PARAMETRE
+                </p>
+                <div class="but">
+                
+                    <button type="button" id="theme" onclick="couleur()" title="Theme">🖌️</button><br><br>
+                <div id="menutheme"  class="hidden">
+                    <a href="theme.html">
+                        THEME
+                    </a>
+                </div>
+                    <button type="button" id="info"   aria-label="" title="Information sur le site">❕</button><br><br>
+                </div> 
             </div>
             <script>
                 function menu(){
@@ -147,19 +37,27 @@ button :hover{/*change le style lorsque la sourie passe sur le boutton*/
                 /*.classList permet de lister des classes de css de l'element*/
                 }
             </script>
+
+            <script>
+                function couleur(){
+                    document.getElementById("menutheme").classList.toggle("hidden")/*permet de rechercher l'element qui a cet identite*/
+                /*.classList permet de lister des classes de css de l'element*/
+                }
+            </script>
+
             <a href="aide.html">❔</a><br><br>
                
         </section>
 
         <div id="recherche">
             <input type="text" id="search" placeholder="🔬  Rechercher le patient ici..."><br><br>
-            <button onclick="Recherche()">RECHERCHER</button>
+            <button onclick="Recherche()" id="rech">RECHERCHER</button>
         </div>
 
-        <script>
+        <script >
             function Recherche(){
                 let valeur = document.getElementById("search").value;
-                alert("Recherche :" +valeur);
+                alert(valeur);
             }
         </script>
             
@@ -170,16 +68,16 @@ button :hover{/*change le style lorsque la sourie passe sur le boutton*/
                 </u>
             </h1>
     
-            <h2 class="claire">
-                ACCEUIL
+            <h2 class="claire" id="h2">
+               <b>ACCEUIL</b> 
             </h2>
     
-            <h3 class="claire">
-                BIENVENU 👋
+            <h3 class="claire" id="h3">
+                <b>BIENVENU 👋</b>
             </h3>
-            <a href="ajouterPatient.html" class="ani">➕ Ajouter un patient</a><br><br>
-            <a href="ListePatient.html" class="ani">📝liste des patient</a><br><br>
-            <a href="DossierMedical.html" class="ani">🗒️Dossier du patient</a><br><br>
+            <a href="ajouterPatient.html" class="ani"><strong>➕ Ajouter un patient</a></strong><br><br>
+            <a href="ListePatient.html" class="ani"><strong>📝liste des patient</a></strong>><br><br>
+            <a href="DossierMedical.html" class="ani"><strong>🗒️Dossier du patient</a></strong><br><br>
         </div>
 
     </header>
@@ -204,7 +102,6 @@ button :hover{/*change le style lorsque la sourie passe sur le boutton*/
         
     <footer>
         <button type="button" id="send"   aria-label="message" title="Envoyer un message au proprietaire en cas de probleme">✏️</button><br><br>
-        <button type="button" id="info"   aria-label="" title="Information sur le site">❕</button><br><br> 
     </footer>
         
 </body>
